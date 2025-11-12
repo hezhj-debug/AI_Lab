@@ -1,0 +1,1 @@
+import{aH as e}from"./index-B7NibMAT.js";const t="update:modelValue",s="change",i=a=>e?window.requestAnimationFrame(a):setTimeout(a,16),n=a=>e?window.cancelAnimationFrame(a):clearTimeout(a);export{s as C,t as U,n as c,i as r};
