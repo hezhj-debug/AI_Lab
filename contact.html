@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <title>联系 | SAIL 空间智能实验室</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.clustrmaps.com/map_v2.js"></script>
+  <style>
+    :root{ --primary:#003366; }
+    .section-title{border-left:4px solid var(--primary);padding-left:0.75rem;margin-bottom:1.5rem;}
+  </style>
+  <script>fetch('nav.html').then(r=>r.text()).then(d=>document.body.insertAdjacentHTML('afterbegin',d)).catch(()=>console.warn('nav加载失败'));</script>
+</head>
+<body>
+  <!-- 联系信息 -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title">联系我们 Contact</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h5><i class="fa fa-map-marker-alt me-2"></i>地址</h5>
+          <p>深圳市光明区中山大学深圳校区工学园 3 号楼</p>
+          <h5><i class="fa fa-envelope me-2"></i>邮箱</h5>
+          <p><a href="mailto:sail@mail.sysu.edu.cn">sail@mail.sysu.edu.cn</a></p>
+          <h5><i class="fa fa-phone me-2"></i>电话</h5>
+          <p>+86-755-12345678</p>
+        </div>
+        <div class="col-md-6">
+          <!-- 访客地图 -->
+          <div id="clustrmaps" style="height:200px;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 研究生招生 -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">研究生招生 Graduate Admission</h2>
+      <p>实验室长期招收硕士、博士、博士后，欢迎学有余力的本科生提前加入科研训练。</p>
+      <h5>希望你具备：</h5>
+      <ol>
+        <li>较强的自我驱动力与自律精神；</li>
+        <li>浓厚的研究兴趣与持续学习意愿；</li>
+        <li>良好的数学与专业基础，英语佳者加分。</li>
+      </ol>
+      <a href="mailto:sail@mail.sysu.edu.cn" class="btn btn-primary">发送邮件申请</a>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer>
+    <div class="container">
+      <p class="mb-0">© 2025 中山大学空间智能实验室 SAIL.</p>
+      <p class="mb-0">Powered by <a href="https://getbootstrap.com" class="text-white">Bootstrap</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>var _clustrmaps = {key:'sail-contact-demo',path:'/contact',id:'clustrmaps'};</script>
+</body>
+</html>
