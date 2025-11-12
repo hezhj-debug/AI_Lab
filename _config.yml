@@ -9,7 +9,7 @@ email:
 description: "3D Spatio-Temporal AI Laboratory"
 keyword: ""
 url: "https://hezhj-debug.github.io"          # your host, for absolute URL
-baseurl: "/mytest2"      # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: "/AI_Lab"      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "" # you code repository
 
 # Sidebar settings
