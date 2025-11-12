@@ -23,26 +23,16 @@
     .timeline-item::before{content:'';position:absolute;left:14px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--primary);}
     footer{background:var(--primary);color:#fff;padding:2rem 0;text-align:center;}
   </style>
+  <!-- 放在 <head> 最底部   导航-->
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => document.body.insertAdjacentHTML('afterbegin', data))
+      .catch(() => console.warn('nav.html 加载失败'));
+  </script>
 </head>
 <body>
-  <!-- 导航 -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-    <div class="container">
-      <a class="navbar-brand" href="#"><img src="https://sysu-sail.net/assets/lavalogo-C7RoK8_D.png" height="30"> SAIL</a>
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">主页</a></li>
-          <li class="nav-item"><a class="nav-link active" href="team.html">团队</a></li>
-          <li class="nav-item"><a class="nav-link" href="#research">研究</a></li>
-          <li class="nav-item"><a class="nav-link" href="#resources">资源</a></li>
-          <li class="nav-item"><a class="nav-link" href="#events">动态</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">联系</a></li>
-        </ul>
-        <button class="btn btn-sm btn-outline-primary ms-2" id="langBtn">EN</button>
-      </div>
-    </div>
-  </nav>
+  
 
   <!-- 轮播 -->
   <div id="carousel" class="carousel slide" data-bs-ride="carousel">
