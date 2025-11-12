@@ -1,0 +1,44 @@
+/* 导航栏字体大小和基础样式 */
+.navbar-default .navbar-nav > li > a,
+.navbar-inverse .navbar-nav > li > a {
+  font-size: 20px !important;
+  transition: color 0.2s;
+}
+
+/* 页面顶端时：默认白色，选中蓝色 */
+.navbar-default .navbar-nav > li > a {
+  color: #fff !important;
+}
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #1976d2 !important;
+  background-color: transparent !important;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff !important;
+}
+.navbar-inverse .navbar-nav > li.active > a,
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #1976d2 !important;
+  background-color: transparent !important;
+}
+
+/* 页面滚动后：字体黑色，选中蓝色 */
+.navbar.navbar-scrolled .navbar-nav > li > a {
+  color: #000 !important;
+}
+.navbar.navbar-scrolled .navbar-nav > li.active > a,
+.navbar.navbar-scrolled .navbar-nav > li > a:hover,
+.navbar.navbar-scrolled .navbar-nav > li > a:focus {
+  color: rgb(0, 133, 161) !important;
+  background-color: transparent !important;
+}
+
+/* 导航栏内边距等细节 */
+.navbar-nav > li > a {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}

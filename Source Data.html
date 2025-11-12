@@ -1,0 +1,237 @@
+---
+layout: default
+title: "Source Data"
+description: ""
+header-img: "img/Data.jpg"
+---
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}'); height: 400px">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="site-heading" id="tag-heading">
+                  <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                  <span class="subheading">{{ page.description }}</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<div class="container">
+  <div class="zh post-container">
+
+    <h2 style="margin-bottom: 40px; font-size: 36px; font-weight: bold; color: #333;">📚 Benchmark Datasets</h2>
+
+    <!-- City-Facade -->
+    <div class="dataset-card">
+      <div class="dataset-grid">
+        <div class="dataset-left">
+          <div class="swiper city-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="https://github.com/Ting-Devin-Han/Epingpages.github.io/raw/master/images/JMC.gif" onclick="openPreview(this.src)"></div>
+              <div class="swiper-slide"><img src="https://github.com/Ting-Devin-Han/Epingpages.github.io/raw/master/images/CAR.gif" onclick="openPreview(this.src)"></div>
+              <div class="swiper-slide"><img src="https://github.com/Ting-Devin-Han/Epingpages.github.io/raw/master/images/XHR.gif" onclick="openPreview(this.src)"></div>
+              <div class="swiper-slide"><img src="https://github.com/Ting-Devin-Han/Epingpages.github.io/raw/master/images/YWR.gif" onclick="openPreview(this.src)"></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+
+        <div class="dataset-text">
+          <h3>City-Facade</h3>
+          <div class="badge-group">
+            <span class="badge urban">Urban</span>
+            <span class="badge building">Building Facade</span>
+            <span class="badge lidar">LiDAR</span>
+          </div>
+          <p>A large-scale urban building facade dataset for semantic-level and instance-level segmentation from MLS LiDAR point clouds. The collection includes diverse streets in Xiamen, China. Useful for research in semantic segmentation, urban modeling, and point cloud completion.</p>
+          <div class="dataset-links">
+            <a href="https://github.com/Ting-Devin-Han/City-Facade" target="_blank">Code 💻</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DBNet -->
+    <div class="dataset-card">
+      <div class="dataset-grid">
+        <div class="dataset-left">
+          <div class="swiper dbnet-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="https://github.com/Ting-Devin-Han/Epingpages.github.io/raw/master/images/DBNet.gif" onclick="openPreview(this.src)"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dataset-text">
+          <h3>DBNet</h3>
+          <div class="badge-group">
+            <span class="badge traffic">Traffic</span>
+            <span class="badge pointcloud">Point Cloud</span>
+          </div>
+          <p>A comprehensive dataset covering 1,000+ km of roads in Xiamen with 3D point clouds, GNSS, and video images. It supports autonomous driving decision-making research and has been adopted by 600+ organizations worldwide.</p>
+          <div class="dataset-links">
+            <a href="https://openaccess.thecvf.com/content_cvpr_2018/html/Chen_LiDAR-Video_Driving_Dataset_CVPR_2018_paper.html" target="_blank">Paper 📄</a>
+            <a href="https://github.com/driving-behavior/DBNet" target="_blank">Code 💻</a>
+            <a href="http://www.dbehavior.net/" target="_blank">HomePage 🏠</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 图片弹窗 -->
+<div id="previewModal" onclick="closePreview()">
+  <img id="previewImg" src="">
+</div>
+
+<!-- 样式 -->
+<style>
+/* 卡片样式 */
+.dataset-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 24px;
+  margin-bottom: 40px;
+  transition: 0.3s;
+}
+.dataset-card:hover {
+  transform: translateY(-5px);
+}
+
+.dataset-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.dataset-left {
+  width: 45%;
+}
+.dataset-left img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.dataset-text {
+  width: 55%;
+}
+
+.dataset-text h3 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #1976d2;
+  margin-bottom: 10px;
+}
+
+.badge-group {
+  margin-bottom: 12px;
+}
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 12px;
+  margin-right: 6px;
+  color: white;
+}
+.urban { background-color: #ffa726; }
+.building { background-color: #4db6ac; }
+.lidar { background-color: #64b5f6; }
+.traffic { background-color: #ba68c8; }
+.pointcloud { background-color: #9575cd; }
+
+.dataset-links a {
+  display: inline-block;
+  background: #1976d2;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin-right: 10px;
+  margin-top: 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.dataset-links a:hover {
+  background: #004ba0;
+}
+
+/* swiper 按钮 */
+.swiper-button-next, .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background: rgba(103, 103, 104, 0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 18px;
+  color: rgb(8, 8, 9);
+  font-weight: bold;
+}
+
+/* 悬停时更亮 */
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  background: #f2f3f4; 
+}
+
+/* 图片预览弹窗 */
+#previewModal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+}
+#previewModal img {
+  max-width: 90%;
+  max-height: 90%;
+}
+</style>
+
+<!-- 脚本 -->
+<script>
+// Swiper 初始化
+var citySwiper = new Swiper('.city-swiper', {
+  loop: true,
+  centeredSlides: true,
+  slidesPerView: 1,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
+
+var dbnetSwiper = new Swiper('.dbnet-swiper', {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 10
+});
+
+// 图片点击预览
+function openPreview(src) {
+  document.getElementById('previewImg').src = src;
+  document.getElementById('previewModal').style.display = 'flex';
+}
+function closePreview() {
+  document.getElementById('previewModal').style.display = 'none';
+}
+</script>
