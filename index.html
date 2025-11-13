@@ -23,7 +23,7 @@
     .timeline-item::before{content:'';position:absolute;left:14px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--primary);}
     footer{background:var(--primary);color:#fff;padding:2rem 0;text-align:center;}
   </style>
-  <!-- 放在 <head> 最底部   导航-->
+  <!-- 统一导航注入 -->
   <script>
     fetch('nav.html')
       .then(res => res.text())
@@ -32,8 +32,6 @@
   </script>
 </head>
 <body>
-  
-
   <!-- 轮播 -->
   <div id="carousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -42,7 +40,7 @@
           <div class="text-center">
             <h1 class="display-4 fw-bold">中国空间智能大会 2025</h1>
             <p class="lead">ChinaSI 2025 · 深圳 · 6月</p>
-            <a class="btn btn-light btn-lg" href="#events">立即注册</a>
+            <a class="btn btn-light btn-lg" href="events.html">立即注册</a>
           </div>
         </div>
       </div>
@@ -83,44 +81,16 @@
         <div class="timeline-item"><div class="fw-bold">2025-01</div><div>6 篇论文被 ICRA 2025 录用</div></div>
         <div class="timeline-item"><div class="fw-bold">2024-10</div><div>4 篇论文被 ECCV 2024 录用</div></div>
       </div>
-      <div class="text-end mt-3"><a class="btn btn-sm btn-outline-primary" href="#">更多 more</a></div>
-    </div>
-  </section>
-
-  <!-- 会议 DDL -->
-  <section class="py-5" id="resources">
-    <div class="container">
-      <h2 class="mb-4">会议截稿日 Conference DDLs</h2>
-      <div class="table-responsive">
-        <table class="table table-hover align-middle">
-          <thead class="table-light"><tr><th>会议名称</th><th>级别</th><th>截稿日期</th><th>官网</th></tr></thead>
-          <tbody>
-            <tr><td>ChinaSI 2025</td><td><span class="badge bg-danger">CCF A</span></td><td>2025-06</td><td><a href="#" class="text-decoration-none">link</a></td></tr>
-            <tr><td>PerCom 2025</td><td><span class="badge bg-warning">CCF B</span></td><td>2025-10</td><td><a href="https://percom.org" class="text-decoration-none">percom.org</a></td></tr>
-            <tr><td>WWW 2026</td><td><span class="badge bg-danger">CCF A</span></td><td>2025-10</td><td><a href="https://www2026.thewebconf.org" class="text-decoration-none">www2026</a></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- 联系我们 -->
-  <section class="py-5 bg-light" id="contact">
-    <div class="container text-center">
-      <h2 class="mb-4">联系我们 Contact</h2>
-      <p>📍 深圳市光明区中山大学深圳校区工学园 3 号楼<br>
-         📧 sail@mail.sysu.edu.cn<br>
-         📞 +86-755-12345678</p>
-      <!-- 访客地图 -->
-      <div id="clustrmaps" class="mt-4 d-inline-block"></div>
+      <div class="text-end mt-3"><a class="btn btn-sm btn-outline-primary" href="events.html">更多 more</a></div>
     </div>
   </section>
 
   <!-- 页脚 -->
   <footer>
     <div class="container">
-      <p class="mb-0">© 2025 中山大学空间智能实验室 SAIL. All rights reserved.</p>
-      <p class="mb-0">Powered by <a href="https://getbootstrap.com" class="text-white">Bootstrap</a> + <a href="https://gohugo.io" class="text-white">Hugo</a></p>
+      <div id="clustrmaps" class="mb-4"></div>
+      <p class="mb-0">© 2025 中山大学空间智能实验室 SAIL.</p>
+      <p class="mb-0">Powered by <a href="https://getbootstrap.com" class="text-white">Bootstrap</a></p>
     </div>
   </footer>
 
@@ -128,17 +98,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- 访客地图 -->
   <script>
-    var _clustrmaps = {
-      key: 'sail-demo',
-      path: '/',
-      id: 'clustrmaps'
-    };
+    var _clustrmaps = {key:'sail-demo',path:'/',id:'clustrmaps'};
   </script>
-  <!-- 语言切换（示例） -->
+  <!-- 语言切换占位 -->
   <script>
-    document.getElementById('langBtn').addEventListener('click', function () {
-      alert(' bilingual switch demo - integrate i18n later.');
-    });
+    document.getElementById('langBtn') && document.getElementById('langBtn').addEventListener('click', () => alert(' bilingual switch demo - integrate i18n later.'));
   </script>
 </body>
 </html>

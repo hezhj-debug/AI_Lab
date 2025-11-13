@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <title>动态 | SAIL 空间智能实验室</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root{ --primary:#003366; }
+    .timeline{position:relative;padding:1rem 0;}
+    .timeline::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:2px;background:#e5e5e5;}
+    .timeline-item{margin-bottom:1.5rem;position:relative;padding-left:50px;}
+    .timeline-item::before{content:'';position:absolute;left:14px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--primary);}
+  </style>
+  <script>fetch('nav.html').then(r=>r.text()).then(d=>document.body.insertAdjacentHTML('afterbegin',d)).catch(()=>console.warn('nav加载失败'));</script>
+</head>
+<body>
+  <!-- 时间轴 -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4">团队动态 Recent Events</h2>
+      <div class="timeline">
+        <div class="timeline-item"><div class="fw-bold">2025-06</div><div>2025 年中国空间智能大会（ChinaSI）开放注册，中山大学承办，郭裕兰教授任大会主席</div></div>
+        <div class="timeline-item"><div class="fw-bold">2025-02</div><div>实验室 6 篇论文被 CVPR 2025 录用</div></div>
+        <div class="timeline-item"><div class="fw-bold">2025-01</div><div>实验室 6 篇论文被 ICRA 2025 录用</div></div>
+        <div class="timeline-item"><div class="fw-bold">2024-12</div><div>实验室 1 人入选第十届中国科协青年人才托举工程</div></div>
+        <div class="timeline-item"><div class="fw-bold">2024-12</div><div>实验室 2 篇论文被 IEEE TIP 接收</div></div>
+        <div class="timeline-item"><div class="fw-bold">2024-05</div><div>实验室 4 篇论文被 ECCV 2024 接收</div></div>
+        <div class="timeline-item"><div class="fw-bold">2024-05</div><div>实验室 1 篇论文被 IEEE TPAMI 录用</div></div>
+        <div class="timeline-item"><div class="fw-bold">2024-03</div><div>实验室 3 篇论文被 CVPR 2024 接收</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer>
+    <div class="container">
+      <p class="mb-0">© 2025 中山大学空间智能实验室 SAIL.</p>
+      <p class="mb-0">Powered by <a href="https://getbootstrap.com" class="text-white">Bootstrap</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
