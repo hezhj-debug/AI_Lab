@@ -3,6 +3,7 @@ fetch('assets/img/lavalogo.png')
   .then(() => {}) // 预加载 logo，避免闪烁
   .catch(() => {});
 
+//统一导航注入 
 fetch('nav.html')
   .then(res => res.text())
   .then(data => document.body.insertAdjacentHTML('afterbegin', data))
