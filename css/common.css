@@ -1,0 +1,32 @@
+/* =============== 公共变量 =============== */
+:root{
+  --primary:#003366;
+  --secondary:#f8f9fa;
+}
+
+/* =============== 全局基础 =============== */
+body{
+  font-family:"Helvetica Neue",Helvetica,"PingFang SC","Microsoft YaHei",sans-serif;
+}
+
+/* =============== 导航栏 =============== */
+.navbar-brand{font-weight:bold;color:var(--primary)!important;}
+
+/* =============== 卡片 =============== */
+.card-hover{transition:transform .2s;}
+.card-hover:hover{transform:translateY(-4px);}
+
+/* =============== 章节标题 =============== */
+.section-title{border-left:4px solid var(--primary);padding-left:0.75rem;margin-bottom:1.5rem;}
+
+/* =============== 时间轴 =============== */
+.timeline{position:relative;padding:1rem 0;}
+.timeline::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:2px;background:#e5e5e5;}
+.timeline-item{margin-bottom:1.5rem;position:relative;padding-left:50px;}
+.timeline-item::before{content:'';position:absolute;left:14px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--primary);}
+
+/* =============== 页脚 =============== */
+footer{background:var(--primary);color:#fff;padding:2rem 0;text-align:center;}
+
+/* =============== 轮播（仅首页） =============== */
+.carousel-item{height:400px;background:center/cover no-repeat;}
