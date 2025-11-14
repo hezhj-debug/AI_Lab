@@ -31,14 +31,55 @@ footer{background:var(--primary);color:#fff;padding:2rem 0;text-align:center;}
 /* =============== 轮播（仅首页） =============== */
 .carousel-item{height:400px;background:center/cover no-repeat;}
 
-/* ====== 红色主题 ====== */
-.theme-red{
-  background:#006400;          /* 整屏绿 */
+
+/* 整页绿色主题 */
+.theme-green{
+  background:#28a745;          /* 你想要的绿色 */
+  color:#fff;                  /* 默认文字白色 */
 }
-.theme-red .card-block{        /* 所有白卡片 */
-  background:#fff;
-  border-radius:.5rem;
-  padding:3rem 2rem;
-  margin:2rem auto;
-  max-width:1140px;            /* 与 container 一致 */
+
+
+/* 让根元素绿到底 */
+html.theme-green,
+html.theme-green body {
+  background: #28a745;
+  color: #fff;
+  min-height: 100vh;   /* 撑满整屏 */
+  margin: 0;
+}
+
+/* 白卡片：真正的内容区，四周自动留绿 */
+.card-block {
+  background: #fff;
+  color: #212529;
+  width: 60vw;                 /* 你想保持的宽度 */
+  max-width: none;
+  margin: 3rem auto;           /* 上下 3rem = 绿边 */
+  border-radius: 0.5rem;
+  padding: 3rem 2rem;
+}
+
+/* 绿底导航栏 */
+.navbar-green{
+  background-color:#28a745;   /* 你想要的绿色 */
+}
+.navbar-green .navbar-brand,
+.navbar-green .nav-link{
+  color:#fff !important;      /* 白字 */
+}
+.navbar-green .nav-link:hover{
+  color:#e6e6e6 !important;   /* 悬停稍浅 */
+}
+.navbar-green .navbar-toggler-icon{
+  filter: invert(1);   /* 把黑线转成白线 */
+}
+
+/* 粘底布局 */
+body.sticky-footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body.sticky-footer > main {
+  flex: 1;   /* 中间区域占满剩余空间 */
 }

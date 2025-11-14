@@ -10,7 +10,7 @@ fetch('nav.html')
   .catch(() => console.warn('nav.html 加载失败'));
 
 /* ③ 启用率色主题 + 白卡片 */
-document.documentElement.classList.add('theme-red');   // 一次性生效
+document.documentElement.classList.add('theme-green');  
 
 /* 访客地图（仅需要页面调用） */
 window.initClustrmaps = function(key, path, id){

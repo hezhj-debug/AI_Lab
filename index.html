@@ -35,60 +35,61 @@
 -->
  
 </head>
-<body>
-  <!-- 轮播 -->
-  <div id="carousel" class="carousel slide card-block" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="d-flex h-100 align-items-center justify-content-center text-white">
-          <div class="text-center">
-            <h1 class="display-4 fw-bold">中国空间智能大会 2025</h1>
-            <p class="lead">ChinaSI 2025 · 深圳 · 6月</p>
-            <!-- <a class="btn btn-light btn-lg" href="events.html">立即注册</a> -->
+<body class="sticky-footer theme-green">
+  <main>      <!-- 所有主体内容包进来 -->
+    <!-- 轮播 -->
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex h-100 align-items-center justify-content-center text-white">
+            <div class="text-center">
+              <h1 class="display-4 fw-bold">中国空间智能大会 2025</h1>
+              <p class="lead">ChinaSI 2025 · 深圳 · 6月</p>
+              <!-- <a class="btn btn-light btn-lg" href="events.html">立即注册</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex h-100 align-items-center justify-content-center text-white">
+            <div class="text-center">
+              <h2 class="fw-bold">6 篇论文被 CVPR 2025 录用</h2>
+              <p class="lead">实验室最新成果</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <div class="d-flex h-100 align-items-center justify-content-center text-white">
-          <div class="text-center">
-            <h2 class="fw-bold">6 篇论文被 CVPR 2025 录用</h2>
-            <p class="lead">实验室最新成果</p>
-          </div>
+      <button class="carousel-control-prev" data-bs-target="#carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+      <button class="carousel-control-next" data-bs-target="#carousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+    </div>
+
+    <!-- 实验室简介 -->
+    <section class="py-5 card-block" id="home">
+      <div class="container">
+        <h2 class="mb-4">实验室简介 Introduction</h2>
+        <p>中山大学空间智能实验室（SAIL）专注于三维空间感知、理解与生成基础理论与核心算法研究，及其在机器人等应用领域的关键技术研发。实验室是广东省先进智能感知技术重点实验室、广东省低空安全探测技术工程中心的核心组成团队。</p>
+        <div class="row g-4 mt-3">
+          <div class="col-md-3 text-center"><i class="fa fa-users fa-2x text-primary"></i><div class="mt-2">教授 1 名<br>副教授 5 名</div></div>
+          <div class="col-md-3 text-center"><i class="fa fa-graduation-cap fa-2x text-primary"></i><div class="mt-2">博硕士研究生<br>40 余名</div></div>
+          <div class="col-md-3 text-center"><i class="fa fa-paper-plane fa-2x text-primary"></i><div class="mt-2">CCF A 类论文<br>100 余篇</div></div>
+          <div class="col-md-3 text-center"><i class="fa fa-trophy fa-2x text-primary"></i><div class="mt-2">国家科技进步奖<br>二等奖</div></div>
         </div>
       </div>
-    </div>
-    <button class="carousel-control-prev" data-bs-target="#carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-    <button class="carousel-control-next" data-bs-target="#carousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
-  </div>
+    </section>
 
-  <!-- 实验室简介 -->
-  <section class="py-5  card-block" id="home">
-    <div class="container">
-      <h2 class="mb-4">实验室简介 Introduction</h2>
-      <p>中山大学空间智能实验室（SAIL）专注于三维空间感知、理解与生成基础理论与核心算法研究，及其在机器人等应用领域的关键技术研发。实验室是广东省先进智能感知技术重点实验室、广东省低空安全探测技术工程中心的核心组成团队。</p>
-      <div class="row g-4 mt-3">
-        <div class="col-md-3 text-center"><i class="fa fa-users fa-2x text-primary"></i><div class="mt-2">教授 1 名<br>副教授 5 名</div></div>
-        <div class="col-md-3 text-center"><i class="fa fa-graduation-cap fa-2x text-primary"></i><div class="mt-2">博硕士研究生<br>40 余名</div></div>
-        <div class="col-md-3 text-center"><i class="fa fa-paper-plane fa-2x text-primary"></i><div class="mt-2">CCF A 类论文<br>100 余篇</div></div>
-        <div class="col-md-3 text-center"><i class="fa fa-trophy fa-2x text-primary"></i><div class="mt-2">国家科技进步奖<br>二等奖</div></div>
+    <!-- 近期动态 -->
+    <section class="py-5 bg-light card-block" id="events">
+      <div class="container">
+        <h2 class="mb-4">近期动态 Recent Events</h2>
+        <div class="timeline">
+          <div class="timeline-item"><div class="fw-bold">2025-06</div><div>ChinaSI 2025 开放注册（承办：中山大学）</div></div>
+          <div class="timeline-item"><div class="fw-bold">2025-02</div><div>6 篇论文被 CVPR 2025 录用</div></div>
+          <div class="timeline-item"><div class="fw-bold">2025-01</div><div>6 篇论文被 ICRA 2025 录用</div></div>
+          <div class="timeline-item"><div class="fw-bold">2024-10</div><div>4 篇论文被 ECCV 2024 录用</div></div>
+        </div>
+        <div class="text-end mt-3"><a class="btn btn-sm btn-outline-primary" href="events.html">更多 more</a></div>
       </div>
-    </div>
-  </section>
-
-  <!-- 近期动态 -->
-  <section class="py-5 bg-light  card-block" id="events">
-    <div class="container">
-      <h2 class="mb-4">近期动态 Recent Events</h2>
-      <div class="timeline">
-        <div class="timeline-item"><div class="fw-bold">2025-06</div><div>ChinaSI 2025 开放注册（承办：中山大学）</div></div>
-        <div class="timeline-item"><div class="fw-bold">2025-02</div><div>6 篇论文被 CVPR 2025 录用</div></div>
-        <div class="timeline-item"><div class="fw-bold">2025-01</div><div>6 篇论文被 ICRA 2025 录用</div></div>
-        <div class="timeline-item"><div class="fw-bold">2024-10</div><div>4 篇论文被 ECCV 2024 录用</div></div>
-      </div>
-      <div class="text-end mt-3"><a class="btn btn-sm btn-outline-primary" href="events.html">更多 more</a></div>
-    </div>
-  </section>
-
+    </section>
+  </main>
   <!-- 页脚 -->
   <footer>
     <div class="container">
