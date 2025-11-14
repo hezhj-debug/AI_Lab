@@ -1,5 +1,5 @@
 /* 统一导航栏注入 */
-fetch('assets/img/lavalogo.png')
+fetch('img/sges-logo.png')
   .then(() => {}) // 预加载 logo，避免闪烁
   .catch(() => {});
 
@@ -8,6 +8,9 @@ fetch('nav.html')
   .then(res => res.text())
   .then(data => document.body.insertAdjacentHTML('afterbegin', data))
   .catch(() => console.warn('nav.html 加载失败'));
+
+/* ③ 启用率色主题 + 白卡片 */
+document.documentElement.classList.add('theme-red');   // 一次性生效
 
 /* 访客地图（仅需要页面调用） */
 window.initClustrmaps = function(key, path, id){

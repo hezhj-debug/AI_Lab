@@ -30,3 +30,15 @@ footer{background:var(--primary);color:#fff;padding:2rem 0;text-align:center;}
 
 /* =============== 轮播（仅首页） =============== */
 .carousel-item{height:400px;background:center/cover no-repeat;}
+
+/* ====== 红色主题 ====== */
+.theme-red{
+  background:#006400;          /* 整屏绿 */
+}
+.theme-red .card-block{        /* 所有白卡片 */
+  background:#fff;
+  border-radius:.5rem;
+  padding:3rem 2rem;
+  margin:2rem auto;
+  max-width:1140px;            /* 与 container 一致 */
+}
