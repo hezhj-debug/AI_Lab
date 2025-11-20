@@ -4,54 +4,79 @@
   <meta charset="utf-8">
   <title>资源 | 3DAILab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- 公共 CSS -->
+  <!-- 公共 CSS -->
   <link href="css/common.css" rel="stylesheet">
+  <link href="css/picture.css" rel="stylesheet">
+  <link href="css/resources.css" rel="stylesheet">
   <!-- Bootstrap & FontAwesome CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- 公共 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/common.js"></script>
-
+  <script src="js/resource.js"></script>
 </head>
-<body  class="sticky-footer theme-green">
+<body class="sticky-footer theme-green">
   <main> 
-    <!-- 计算资源 -->  <!-- 所有主体内容包进来 -->
-    <section class="py-5 card-block">
-      <div class="container">
-        <h2 class="section-title">计算资源 Computing</h2>
-        <div class="row g-4">
-          <div class="col-md-4"><div class="card card-hover h-100 text-center"><i class="fa fa-server fa-3x text-primary mt-3"></i><div class="card-body"><h5>GPU 集群</h5><p>80 GB 显存 A100、V100、RTX 4090/3090/2080Ti 等</p></div></div></div>
-          <div class="col-md-4"><div class="card card-hover h-100 text-center"><i class="fa fa-microchip fa-3x text-primary mt-3"></i><div class="card-body"><h5>多模态移动扫描平台</h5><p>RIEGL、FARO、速腾、Ouster、大疆全系 LiDAR</p></div></div></div>
-          <div class="col-md-4"><div class="card card-hover h-100 text-center"><i class="fa fa-robot fa-3x text-primary mt-3"></i><div class="card-body"><h5>机器人平台</h5><p>履带/轮式/四足机器人、无人机、机械臂、灵巧手</p></div></div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 软件资源 -->
-    <section class="py-5 bg-light card-block">
-      <div class="container">
-        <h2 class="section-title">软件资源 Software</h2>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><i class="fa fa-check-circle text-primary me-2"></i>多传感器信号仿真系统</li>
-          <li class="list-group-item"><i class="fa fa-check-circle text-primary me-2"></i>点云处理工具链（PCL、Open3D）</li>
-          <li class="list-group-item"><i class="fa fa-check-circle text-primary me-2"></i>深度学习框架（PyTorch、TensorRT）</li>
-        </ul>
-      </div>
-    </section>
-
     <!-- 数据资源 -->
     <section class="py-5 card-block">
       <div class="container">
         <h2 class="section-title">数据资源 Data</h2>
         <p>实验室自建/合作采集大规模多模态数据集，涵盖：</p>
-        <ul>
-          <li>城市场景车载/机载点云</li>
-          <li>事件相机高速序列</li>
-          <li>多光谱/红外影像</li>
-          <li>机器人交互轨迹</li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary">申请数据</a>
+        
+        <div class="accordion" id="dataAccordion">
+          <!-- City-Facade 数据集 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingCityFacade">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                      data-bs-target="#collapseCityFacade" aria-expanded="false" 
+                      aria-controls="collapseCityFacade">
+                <i class="fas fa-building me-2"></i>City-Facade
+              </button>
+            </h2>
+            <div id="collapseCityFacade" class="accordion-collapse collapse" 
+                 aria-labelledby="headingCityFacade" data-bs-parent="#dataAccordion">
+              <div class="accordion-body">
+                <p>一个大规模城市建筑立面数据集，用于MLS LiDAR点云的语义层和实例级分割。该
+                  收藏涵盖了中国厦门的多样街道。对语义分割、城市建模和点云补全的研究非常有用。
+                </p>
+                <a href="https://github.com/Ting-Devin-Han/City-Facade" target="_blank" 
+                   class="btn btn-primary dataset-btn">
+                  <i class="fab fa-github me-2"></i>访问 City-Facade 项目
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- DBNet 数据集 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingDBNet">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                      data-bs-target="#collapseDBNet" aria-expanded="false" 
+                      aria-controls="collapseDBNet">
+                <i class="fas fa-road me-2"></i>DBNet
+              </button>
+            </h2>
+            <div id="collapseDBNet" class="accordion-collapse collapse" 
+                 aria-labelledby="headingDBNet" data-bs-parent="#dataAccordion">
+              <div class="accordion-body">
+                <p>一个涵盖厦门1000+公里道路的综合数据集，包含三维点云、
+                  GNSS和视频图像。它支持自动驾驶决策研究，并已被全球600+组织采用
+                </p>
+                <a href="https://github.com/driving-behavior/DBNet" target="_blank" 
+                   class="btn btn-primary dataset-btn">
+                  <i class="fab fa-github me-2"></i>访问 DBNet 项目
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-4">
+          <a href="contact.html" class="btn btn-primary">
+            <i class="fas fa-database me-2"></i>申请数据
+          </a>
+        </div>
       </div>
     </section>
   </main>
@@ -60,10 +85,10 @@
   <footer>
     <div class="container">
       <p class="mb-0">© 2025 中山大学遥感科学与技术学院 3DAILab</p>
-      <p class="mb-0">Powered by <a href="https://getbootstrap.com" class="text-white">Bootstrap</a></p>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data-resources.js"></script>
 </body>
 </html>

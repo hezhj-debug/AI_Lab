@@ -10,7 +10,30 @@ body{
 }
 
 /* =============== 导航栏 =============== */
-.navbar-brand{font-weight:bold;color:var(--primary)!important;}
+/* 1. 加高导航栏 + 加大字号 */
+.navbar-green {
+  min-height: 120px;          /* 默认 56px → 80px */
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.navbar-green .navbar-brand,
+.navbar-green .nav-link {
+  font-size: 1.15rem;        /* 默认 ~1rem → 1.15rem */
+  padding: 0.8rem 1rem;      /* 点击区域更大 */
+}
+
+/* 2. Logo 同步放大 */
+.navbar-brand img {
+  height: 40px;              /* 原 30px → 40px */
+  width: auto;
+}
+
+/* 3. 汉堡按钮也放大 */
+.navbar-green .navbar-toggler {
+  font-size: 1.25rem;        /* 三条线图标变大 */
+  padding: 0.5rem 0.75rem;
+}
 
 /* =============== 卡片 =============== */
 .card-hover{transition:transform .2s;}
@@ -26,10 +49,18 @@ body{
 .timeline-item::before{content:'';position:absolute;left:14px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--primary);}
 
 /* =============== 页脚 =============== */
-footer{background:var(--primary);color:#fff;padding:2rem 0;text-align:center;}
+footer{
+  background:var(--primary);
+  color:#fff;
+  padding:2rem 0;
+  text-align:center;
+}
 
 /* =============== 轮播（仅首页） =============== */
-.carousel-item{height:400px;background:center/cover no-repeat;}
+.carousel-item{
+  height:400px;
+  background:center/cover no-repeat;
+}
 
 
 /* 整页绿色主题 */
@@ -61,7 +92,7 @@ html.theme-green body {
 
 /* 绿底导航栏 */
 .navbar-green{
-  background-color:#28a745;   /* 你想要的绿色 */
+  background:var(--primary);
 }
 .navbar-green .navbar-brand,
 .navbar-green .nav-link{
@@ -73,6 +104,19 @@ html.theme-green body {
 .navbar-green .navbar-toggler-icon{
   filter: invert(1);   /* 把黑线转成白线 */
 }
+/* 最简强制样式 - 权重 0,1,0,0 */
+.navbar.navbar-green .navbar-brand {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+}
+
+.navbar.navbar-green .navbar-brand img {
+  margin-right: 0.75rem !important;
+  height: 48px !important;
+  width: auto !important;
+}
 
 /* 粘底布局 */
 body.sticky-footer {
@@ -82,4 +126,97 @@ body.sticky-footer {
 }
 body.sticky-footer > main {
   flex: 1;   /* 中间区域占满剩余空间 */
+}
+
+/* 轮播整体黑色背景 */
+#carousel {
+  width: 60vw;                 /* 你想保持的宽度 */
+  max-width: none;
+  margin: 3rem auto;           /* 上下 3rem = 绿边 */
+  border-radius: 0.5rem;
+  padding: 3rem 2rem;
+}
+
+/* 让左右控制箭头图标在黑色背景下可见（Bootstrap 默认白箭头） */
+#carousel .carousel-control-prev-icon,
+#carousel .carousel-control-next-icon {
+  filter: none;              /* 已是白色，无需再反转 */
+}
+
+/* 文字颜色保持白色（Bootstrap 默认） */
+#carousel h1,
+#carousel h2,
+#carousel p {
+  color: #0c63e4 !important;
+  text-align: center;          /* 水平居中 */
+  margin: 0 auto;              /* 清除默认 margin，辅助水平居中 */
+}
+
+/* 横线指示器 */
+.line-indicator {
+  bottom: 1.2rem;          /* 距离底部位置 */
+}
+
+/* 细长横线指示器 */
+.line-indicator button {
+  width: 18px;           /* 比原来窄 */
+  height: 2px;           /* 更薄 */
+  margin: 0 3px;
+  border: none;
+  border-radius: 0;      /* 去掉圆角 → 直线 */
+  background: rgba(255, 255, 255, .45);
+  transition: background .3s;
+}
+
+
+.line-indicator button.active {
+  width: 16px;           /* 比未激活再短一点 */
+  height: 3px;           /* 同样 2px 细线 */
+  border-radius: 0;      /* 保持直线 */
+  background: #fff;      /* 高亮白色 */
+}
+
+/*团队 教师简介你 */
+.accordion-button:not(.collapsed) {
+  background-color: #e7f1ff;
+  color: #0c63e4;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+
+.accordion-button:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.accordion-body {
+  background-color: #f8f9fa;
+  border-left: 3px solid #0d6efd;
+}
+
+
+/* 成果折叠按钮 - 灰色 */
+.btn-gray {
+  background: #6c757d;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  text-align: left;
+  padding: .75rem 1rem;
+  font-size: 1rem;
+  transition: background .2s;
+}
+.btn-gray:hover {
+  background: #5a6268;
+}
+.btn-gray:focus {
+  box-shadow: none;
+}
+
+/* 卡片悬停阴影保留 */
+.card-hover {
+  transition: transform .2s, box-shadow .2s;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(40, 167, 69, .35);
 }
