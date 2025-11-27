@@ -12,10 +12,21 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/all.min.css">
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <!-- 公共 JS -->
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/common.js"></script>
   <script src="js/resource.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <style>
+  .city-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+  }
+  </style>
 </head>
 <body class="sticky-footer theme-green">
   <main> 
@@ -24,7 +35,6 @@
       <div class="container">
         <h2 class="section-title">数据资源 Data</h2>
         <p>实验室自建/合作采集大规模多模态数据集，涵盖：</p>
-        
         <div class="accordion" id="dataAccordion">
           <!-- City-Facade 数据集 -->
           <div class="accordion-item">
@@ -36,19 +46,47 @@
               </button>
             </h2>
             <div id="collapseCityFacade" class="accordion-collapse collapse" 
-                 aria-labelledby="headingCityFacade" data-bs-parent="#dataAccordion">
+                aria-labelledby="headingCityFacade" data-bs-parent="#dataAccordion">
               <div class="accordion-body">
-                <p>一个大规模城市建筑立面数据集，用于MLS LiDAR点云的语义层和实例级分割。该
-                  收藏涵盖了中国厦门的多样街道。对语义分割、城市建模和点云补全的研究非常有用。
-                </p>
-                <a href="https://github.com/Ting-Devin-Han/City-Facade" target="_blank" 
-                   class="btn btn-primary dataset-btn">
-                  <i class="fab fa-github me-2"></i>访问 City-Facade 项目
-                </a>
+                <div class="row align-items-center">
+                  <!-- 左侧动图：四合一轮播 -->
+                  <div class="col-md-5 mb-3 mb-md-0">
+                    <div class="swiper city-swiper" style="height: 200px;">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="https://github.com/Ting-Devin-Han/Epingpages.github.io/raw/master/images/JMC.gif" 
+                              class="img-fluid" onclick="openPreview(this.src)" alt="City-Facade1">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://github.com/Ting-Devin-Han/Epingpages.github.io/raw/master/images/CAR.gif" 
+                              class="img-fluid" onclick="openPreview(this.src)" alt="City-Facade2">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://github.com/Ting-Devin-Han/Epingpages.github.io/raw/master/images/XHR.gif" 
+                              class="img-fluid" onclick="openPreview(this.src)" alt="City-Facade3">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://github.com/Ting-Devin-Han/Epingpages.github.io/raw/master/images/YWR.gif" 
+                              class="img-fluid" onclick="openPreview(this.src)" alt="City-Facade4">
+                        </div>
+                      </div>
+                      <!-- 导航按钮 -->
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                  </div>
+                  <!-- 右侧文字 -->
+                  <div class="col-md-7">
+                    <p>一个大规模城市建筑立面数据集，用于MLS LiDAR点云的语义层和实例级分割。该收藏涵盖了中国厦门的多样街道。对语义分割、城市建模和点云补全的研究非常有用。</p>
+                    <a href="https://github.com/Ting-Devin-Han/City-Facade" target="_blank" class="btn btn-primary btn-sm">
+                      <i class="fab fa-github me-2"></i>访问 City-Facade 项目
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          
+
           <!-- DBNet 数据集 -->
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingDBNet">
@@ -59,20 +97,30 @@
               </button>
             </h2>
             <div id="collapseDBNet" class="accordion-collapse collapse" 
-                 aria-labelledby="headingDBNet" data-bs-parent="#dataAccordion">
+                aria-labelledby="headingDBNet" data-bs-parent="#dataAccordion">
               <div class="accordion-body">
-                <p>一个涵盖厦门1000+公里道路的综合数据集，包含三维点云、
-                  GNSS和视频图像。它支持自动驾驶决策研究，并已被全球600+组织采用
-                </p>
-                <a href="https://github.com/driving-behavior/DBNet" target="_blank" 
-                   class="btn btn-primary dataset-btn">
-                  <i class="fab fa-github me-2"></i>访问 DBNet 项目
-                </a>
+                <div class="row align-items-center">
+                  <!-- 左侧动图 -->
+                  <div class="col-md-5 mb-3 mb-md-0">
+                    <div class="swiper dbnet-swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="https://github.com/Ting-Devin-Han/Epingpages.github.io/raw/master/images/DBNet.gif" class="img-fluid" onclick="openPreview(this.src)" alt="DBNet"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 右侧文字 -->
+                  <div class="col-md-7">
+                    <p>一个涵盖厦门1000+公里道路的综合数据集，包含三维点云、GNSS和视频图像。它支持自动驾驶决策研究，并已被全球600+组织采用。</p>
+                    <a href="https://github.com/driving-behavior/DBNet" target="_blank" class="btn btn-primary btn-sm">
+                      <i class="fab fa-github me-2"></i>访问 DBNet 项目
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        
+
         <div class="mt-4">
           <a href="contact.html" class="btn btn-primary">
             <i class="fas fa-database me-2"></i>申请数据
@@ -80,6 +128,13 @@
         </div>
       </div>
     </section>
+
+    <!-- Swiper 初始化（与页面已有 JS 不冲突） -->
+    <script>
+      new Swiper('.city-swiper', { loop: true, autoplay: { delay: 3000 },
+        navigation: { nextEl: '.city-swiper .swiper-button-next', prevEl: '.city-swiper .swiper-button-prev', } });
+      new Swiper('.dbnet-swiper', { loop: true, autoplay: { delay: 3500 } });
+    </script>
   </main>
 
   <!-- 页脚 -->
