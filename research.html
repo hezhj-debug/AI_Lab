@@ -8,7 +8,9 @@
   <link href="css/common.css" rel="stylesheet">
   <link href="css/picture.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/research_card.css" rel="stylesheet">
   <link rel="stylesheet" href="css/all.min.css">
+
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- 公共 JS -->
   <script src="js/bootstrap.bundle.min.js"></script>
@@ -18,15 +20,139 @@
 <body class="sticky-footer theme-green">   <!-- 已有绿色主题 -->
   <main>      <!-- 所有主体内容包进来 -->
     <!-- 方向简介 -->
-    <section class="py-5 card-block">
+    <!-- <section class="py-5 bg-light card-block">
       <div class="container">
         <h2 class="section-title">方向简介 Introduction</h2>
         <p>主要研究方向为3D点云、激光雷达、深度学习、城市地图绘制、摄影测量等。主要方向包括：</p>
         <div class="row g-4 mt-3">
-          <div class="col-md-4"><div class="card card-hover h-100 text-center"><i class="fas fa-search-location fa-2x text-primary"></i><h5 class="mt-2">激光雷达遥感</h5></div></div>
-          <div class="col-md-4"><div class="card card-hover h-100 text-center"><i class="fas fa-cloud fa-2x text-primary"></i><h5 class="mt-2">三维点云智能处理</h5></div></div>
-          <div class="col-md-4"><div class="card card-hover h-100 text-center"><i class="fa fa-satellite fa-2x text-primary"></i><h5 class="mt-2">遥感图像处理</h5></div></div>
-          <div class="col-md-4"><div class="card card-hover h-100 text-center"><i class="fas fa-seedling fa-2x text-primary"></i><h5 class="mt-2">可持续发展应用</h5></div></div>
+          <div class="col-md-4"><div class="card card-hover h-100 text-center"><i class="fas fa-search-location fa-2x text-primary"></i><h5 class="mt-2">三维点云表征学习</h5></div></div>
+          <div class="col-md-4"><div class="card card-hover h-100 text-center"><i class="fas fa-cloud fa-2x text-primary"></i><h5 class="mt-2">遥感要素提取</h5></div></div>
+          <div class="col-md-4"><div class="card card-hover h-100 text-center"><i class="fa fa-satellite fa-2x text-primary"></i><h5 class="mt-2">三维场景生成</h5></div></div>
+          <div class="col-md-4"><div class="card card-hover h-100 text-center"><i class="fas fa-seedling fa-2x text-primary"></i><h5 class="mt-2">时空大模型</h5></div></div>
+        </div>
+      </div>
+    </section> -->
+
+ <!-- 研究方向 -->
+    <section class="py-5 bg-light card-block">
+      <div class="container">
+        <h2 class="section-title">研究方向</h2>
+        <p class="lead mb-5">实验室主要研究方向为3D点云、激光雷达、深度学习、城市地图绘制、摄影测量等，致力于将前沿人工智能技术与三维视觉相结合，解决实际应用中的关键问题。</p>
+        
+        <!-- 研究方向1：三维点云表征学习 -->
+        <div class="card-block">
+          <h3><i class="section-title"></i>三维点云表征学习</h3>
+          <div class="research-content">
+            <div class="research-image">
+              <i class="fas fa-cubes fa-7x" style="color: var(--primary-color);"></i>
+              <p class="mt-3 text-muted">点云数据与特征学习示意图</p>
+            </div>
+            <div class="research-text">
+              <p class="research-desc">
+                研究三维点云数据的高效表示与特征学习方法，包括点云分割、分类、配准等基础任务，探索点云的结构信息与语义信息提取，为三维视觉任务提供强大的特征表示。通过深度学习、自监督学习等方法，提升点云处理的效率和准确性。
+              </p>
+              
+              <div class="research-keywords">
+                <span class="keyword">点云分割</span>
+                <span class="keyword">特征提取</span>
+                <span class="keyword">深度学习</span>
+                <span class="keyword">自监督学习</span>
+                <span class="keyword">点云配准</span>
+                <span class="keyword">点云分类</span>
+              </div>
+              
+              <div class="applications">
+                <strong>应用领域：</strong>自动驾驶环境感知、机器人导航、三维地图构建、工业检测、文化遗产数字化保护等。
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 研究方向2：遥感要素提取 -->
+        <div class="card-block">
+          <h3><i class="section-title"></i>遥感要素提取</h3>
+          <div class="research-content">
+            <div class="research-image">
+              <i class="fas fa-globe-americas fa-7x" style="color: #1565c0;"></i>
+              <p class="mt-3 text-muted">遥感影像与要素提取示意图</p>
+            </div>
+            <div class="research-text">
+              <p class="research-desc">
+                利用多源遥感数据（光学、SAR、LiDAR等）进行地物要素自动提取与识别，包括建筑物提取、道路网络提取、土地覆盖分类等，为城市测绘、环境监测提供技术支持。结合深度学习与计算机视觉技术，提升遥感影像解译的自动化水平与精度。
+              </p>
+              
+              <div class="research-keywords">
+                <span class="keyword">建筑物提取</span>
+                <span class="keyword">道路网络</span>
+                <span class="keyword">土地覆盖分类</span>
+                <span class="keyword">多源数据融合</span>
+                <span class="keyword">变化检测</span>
+                <span class="keyword">水体提取</span>
+              </div>
+              
+              <div class="applications">
+                <strong>应用领域：</strong>城市规划与管理、灾害监测与评估、农业资源调查、生态环境监测、国土空间规划等。
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 研究方向3：三维场景生成 -->
+        <div class="card-block">
+          <h3><i class="section-title"></i>三维场景生成</h3>
+          <div class="research-content">
+            <div class="research-image">
+              <i class="fas fa-vr-cardboard fa-7x" style="color: #d84315;"></i>
+              <p class="mt-3 text-muted">三维场景生成示意图</p>
+            </div>
+            <div class="research-text">
+              <p class="research-desc">
+                研究基于深度学习的三维场景生成与重建技术，包括从单张图像、多视图或点云数据中重建三维场景，以及三维内容生成、场景补全与编辑等前沿方向。结合神经渲染、生成对抗网络等技术，实现高质量、高效率的三维场景创建。
+              </p>
+              
+              <div class="research-keywords">
+                <span class="keyword">三维重建</span>
+                <span class="keyword">场景补全</span>
+                <span class="keyword">神经渲染</span>
+                <span class="keyword">生成模型</span>
+                <span class="keyword">场景理解</span>
+                <span class="keyword">视图合成</span>
+              </div>
+              
+              <div class="applications">
+                <strong>应用领域：</strong>虚拟现实/增强现实、游戏与影视制作、数字孪生城市、室内导航、文化遗产数字化等。
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 研究方向4：时空大模型 -->
+        <div class="card-block">
+          <h3><i class="section-title"></i>时空大模型</h3>
+          <div class="research-content">
+            <div class="research-image">
+              <i class="fas fa-network-wired fa-7x" style="color: #6a1b9a;"></i>
+              <p class="mt-3 text-muted">时空大模型示意图</p>
+            </div>
+            <div class="research-text">
+              <p class="research-desc">
+                探索面向时空数据的大规模预训练模型，研究多模态时空数据的统一表征学习，开发能够理解和推理时空变化规律的通用人工智能模型。结合Transformer架构、对比学习等方法，构建能够处理复杂时空关系的智能系统。
+              </p>
+              
+              <div class="research-keywords">
+                <span class="keyword">预训练模型</span>
+                <span class="keyword">多模态学习</span>
+                <span class="keyword">时空预测</span>
+                <span class="keyword">通用AI</span>
+                <span class="keyword">变化分析</span>
+                <span class="keyword">Transformer</span>
+              </div>
+              
+              <div class="applications">
+                <strong>应用领域：</strong>城市交通预测、气象气候分析、流行病传播建模、金融市场分析、社会动态监测等。
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

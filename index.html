@@ -19,22 +19,7 @@
   <!-- 公共 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/common.js"></script>
-  <!---
-  <style>
-    :root{ --primary:#003366; --secondary:#f8f9fa; }
-    body{font-family:"Helvetica Neue",Helvetica,"PingFang SC","Microsoft YaHei",sans-serif;}
-    .navbar-brand{font-weight:bold;color:var(--primary)!important;}
-    .carousel-item{height:400px;background:center/cover no-repeat;}
-    .carousel-item:nth-child(1){background-image:url(https://picsum.photos/1600/400?random=1);}
-    .carousel-item:nth-child(2){background-image:url(https://picsum.photos/1600/400?random=2);}
-    .timeline{position:relative;padding:1rem 0;}
-    .timeline::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:2px;background:#e5e5e5;}
-    .timeline-item{margin-bottom:1.5rem;position:relative;padding-left:50px;}
-    .timeline-item::before{content:'';position:absolute;left:14px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--primary);}
-    footer{background:var(--primary);color:#fff;padding:2rem 0;text-align:center;}
-  </style>
--->
- 
+
 </head>
 <body class="sticky-footer">
   <main>      <!-- 所有主体内容包进来 -->
@@ -45,25 +30,21 @@
       <div class="carousel-indicators line-indicator">
         <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
 
-        <div class="carousel-item active"  style="background:url(img/Data.jpg) center/cover no-repeat;">
+        <div class="carousel-item active"  style="background:url(img/team/CHINA_3DV_2024.jpg) center/cover no-repeat;">
           <div class="d-flex h-100 align-items-center justify-content-center text-white">
-            <div class="text-center">
-              <h1 class="display-4 fw-bold">中国空间智能大会 2025</h1>
-              <p class="lead">ChinaSI 2025 · 深圳 · 6月</p>
-            </div>
           </div>
         </div>
 
-        <div class="carousel-item"  style="background:url(img/CVPR.png) center/cover no-repeat;">
+        <div class="carousel-item"  style="background:url(img/team/1.jpg) center/cover no-repeat;">
           <div class="d-flex h-100 align-items-center justify-content-center text-white">
-            <div class="text-center">
-              <h2 class="fw-bold">Scene4U： Hierarchical Layered 3D Scene Reconstruction 
-                from Single Panoramic Image for Your Immerse Exploration 被CVPR 2025 录用
-              </h2>
-              <p class="lead">实验室最新成果</p>
-            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item"  style="background:url(img/team/2.jpg) center/cover no-repeat;">
+          <div class="d-flex h-100 align-items-center justify-content-center text-white">
           </div>
         </div>
 
@@ -73,30 +54,27 @@
     </div>
 
     <!-- 实验室简介 -->
-    <section class="py-5 card-block" id="home">
+    <section class="py-5  bg-light card-block" id="home">
       <div class="container">
         <h2 class="mb-4">简介 Introduction</h2>
-        <p>陈一平， <strong>中山大学地理空间工程与科学学院</strong><strong class="highlight">副教授/博士生导师</strong>。 
-          她还是<strong>中山大学科学研究所副所长， IEEE高级会员，中国图像与图形学会CSIG高级会员。</strong>
-          主要研究方向为
-          <span class="keyword">激光雷达遥感</span>、
-          <span class="keyword">三维点云智能处理</span>、
-          <span class="keyword"></span>遥感图像处理</span>、
-          <span class="keyword">可持续发展应用</span>
-          等。 她领导了国家自然科学基金等12个项目 参与国家自然科学基金重点项目等20余项项目。 
-          她在主要期刊和会议上发表了 50+ 篇论文，包括 
-          <strong>ISPRS</strong>、<strong></strong>JPRS、<strong>CVPR</strong>、<strong>IEEE TGRS</strong>、<strong>IEEE TITS</strong> 和 <strong>JAG</strong>。</p>
-        <div class="row g-4 mt-3">
-          <div class="col-md-3 text-center"><i class="fa fa-users fa-2x text-primary"></i><div class="mt-2">副教授 1 名</div></div>
-          <div class="col-md-3 text-center"><i class="fa fa-graduation-cap fa-2x text-primary"></i><div class="mt-2">博硕士研究生<br>10 余名</div></div>
-          <!--
-          <div class="col-md-3 text-center"><i class="fa fa-paper-plane fa-2x text-primary"></i><div class="mt-2">CCF A 类论文<br>100 余篇</div></div>
-          <div class="col-md-3 text-center"><i class="fa fa-trophy fa-2x text-primary"></i><div class="mt-2">国家科技进步奖<br>二等奖</div></div>
-          -->
-        </div>
+        <p>陈一平副教授领衔的<strong>“三维时空人工智能实验室”（3D Spatiotemporal AI Lab）</strong>隶属于
+          <strong>中山大学遥感科学与技术学院</strong>， 坐落于广东珠海。实验室
+          面向激光雷达遥感与智能三维点云理解的前沿需求，聚焦 <strong>三维点云表征学习</strong>、
+          <strong>遥感要素提取</strong>、 <strong>三维场景生成</strong>与<strong>时空大模型</strong>
+          等关键技术研究，并探索其在实景三维与数字孪生、城市与森林精细化测绘、生态环境可持续发展等领域的应用。课题
+          组致力于多平台、多源传感数据融合，构建稳健可泛化的三维场景理解方法与工程化流程。
+          实验室负责人陈一平副教授入选<strong>国家级青年人才</strong>，
+          共有博硕士研究生10人，本科生7人。近年来实验室在
+          <strong>ISPRS</strong>、<strong>JPRS</strong>、<strong>CVPR</strong>、<strong>IEEE TGRS</strong> 和 <strong>JAG</strong>
+          等顶刊与顶会发表80余篇高水平论文， 并主持或承担<strong>国家自然科学基金面上/青年项目</strong>，<strong>部委基金/预研项目</strong>，
+          与<strong>广东省面上项目</strong>等十余项科研项目，授权国家发明专利20余项。团队成员获<strong>中国遥感应用协会青年女科学家奖特等奖</strong>，
+          <strong>中国测绘学会测绘科学技术奖二等奖</strong>，<strong>中国地理信息产业协会科技进步奖二等奖</strong>，
+          <strong>北京市科技进步奖</strong>等奖励。实验室与加拿大滑铁卢大学、挪威科技大学、香港大学等高校保持密切国际合作，
+          毕业生均入职一线科技企业与遥感测绘相关政府单位，或在国际顶尖高校深造。 实验室长期欢迎博士后、博士生、硕士生及本科生加入，
+          共同开展高水平学术研究与产学研合作。
+        </p>
       </div>
     </section>
-
     <!-- 近期动态 -->
     <section class="py-5 bg-light card-block" id="events">
       <div class="container">

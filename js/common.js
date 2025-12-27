@@ -23,3 +23,5 @@ document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('langBtn');
   if(btn) btn.addEventListener('click', () => alert(' bilingual switch demo - integrate i18n later.'));
 });
+
+

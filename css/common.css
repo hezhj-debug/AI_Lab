@@ -12,9 +12,12 @@ body{
 /* =============== 导航栏 =============== */
 /* 1. 加高导航栏 + 加大字号 */
 .navbar-green {
-  min-height: 120px;          /* 默认 56px → 80px */
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
+   position:fixed !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  z-index:1030 !important;
+  min-height:80px !important;
 }
 
 .navbar-green .navbar-brand,
@@ -63,48 +66,52 @@ footer{
 }
 
 
-/* 整页绿色主题 */
+/* 整页蓝色主题 */
 .theme-green{
-  background:#28a745;          /* 你想要的绿色 */
+  background:#3793ee;          /* 你想要的蓝色 */
   color:#fff;                  /* 默认文字白色 */
 }
 
 
-/* 让根元素绿到底 */
+/* 让根元素蓝到底 */
 html.theme-green,
 html.theme-green body {
-  background: #28a745;
-  color: #fff;
+  background: #fff;
+  color: #ffffffec;
   min-height: 100vh;   /* 撑满整屏 */
   margin: 0;
 }
 
-/* 白卡片：真正的内容区，四周自动留绿 */
+/* 白卡片：真正的内容区，四周自动留蓝 */
 .card-block {
   background: #fff;
   color: #212529;
   width: 60vw;                 /* 你想保持的宽度 */
   max-width: none;
-  margin: 3rem auto;           /* 上下 3rem = 绿边 */
+  margin: 3rem auto;           /* 上下 3rem = 蓝边 */
   border-radius: 0.5rem;
   padding: 3rem 2rem;
 }
 
-/* 绿底导航栏 */
+/* 蓝底导航栏 */
 .navbar-green{
   background:var(--primary);
 }
 .navbar-green .navbar-brand,
 .navbar-green .nav-link{
   color:#fff !important;      /* 白字 */
+  font-size:25px;        /* 字号：可再改 1.05 / 1.15 */
+  font-weight:500;  
+  padding:0.5rem 2rem ;/* 左右 1rem = 按钮间隔 */
 }
 .navbar-green .nav-link:hover{
-  color:#e6e6e6 !important;   /* 悬停稍浅 */
+  color:#e6e6e6 ;  
+  font-weight:600;         /* 字重：500 中等；想更粗用 600 */
 }
 .navbar-green .navbar-toggler-icon{
   filter: invert(1);   /* 把黑线转成白线 */
 }
-/* 最简强制样式 - 权重 0,1,0,0 */
+/* 最简强制样式 */
 .navbar.navbar-green .navbar-brand {
   margin-left: 0 !important;
   padding-left: 0 !important;
@@ -117,6 +124,11 @@ html.theme-green body {
   height: 48px !important;
   width: auto !important;
 }
+
+
+
+
+
 
 /* 粘底布局 */
 body.sticky-footer {
@@ -131,17 +143,33 @@ body.sticky-footer > main {
 /* 轮播整体黑色背景 */
 #carousel {
   width: 60vw;                 /* 你想保持的宽度 */
+  height: 30vw;
   max-width: none;
   margin: 3rem auto;           /* 上下 3rem = 绿边 */
   border-radius: 0.5rem;
   padding: 3rem 2rem;
+  /*background: #808080; */  /* 背景颜色*/
 }
 
-/* 让左右控制箭头图标在黑色背景下可见（Bootstrap 默认白箭头） */
+/* 让轮播项真正占满容器高度 */
+.carousel-inner,
+.carousel-item {
+  height: 100%;        /* 必须 */
+}
+
+/* 背景图强制 100% 高，宽度自适应裁切 */
+.carousel-item {
+  background-size: auto 100% !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* 左右箭头图标颜色 */
 #carousel .carousel-control-prev-icon,
 #carousel .carousel-control-next-icon {
-  filter: none;              /* 已是白色，无需再反转 */
+  filter: grayscale(100%) brightness(60%);   /* 纯灰，亮度可调 */
 }
+
 
 /* 文字颜色保持白色（Bootstrap 默认） */
 #carousel h1,
@@ -218,5 +246,12 @@ body.sticky-footer > main {
 }
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(40, 167, 69, .35);
+  box-shadow: 0 12px 24px #3793ee;
 }
+
+
+/*  class为mb-4的为蓝色 */
+h2.mb-4{
+  color:#003366 !important;   /* 你想用的蓝 */
+}
+
